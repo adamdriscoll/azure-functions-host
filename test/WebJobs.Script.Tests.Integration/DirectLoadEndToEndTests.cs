@@ -28,7 +28,7 @@ namespace Microsoft.Azure.WebJobs.Script.Tests
         [Fact]
         public async Task Invoke()
         {
-            // Verify the type is ls in the typelocator.
+            // Verify the type is in the typelocator.
             JobHostConfiguration config = this.Fixture.Host.ScriptConfig.HostConfig;
             var tl = config.TypeLocator;
             var userType = tl.GetTypes().Where(type => type.FullName == "TestFunction.DirectLoadFunction").First();

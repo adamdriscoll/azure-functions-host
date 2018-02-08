@@ -14,7 +14,7 @@ namespace TestFunction
     public class DirectLoadFunction
     {
 		[FunctionName("DotNetDirectFunction")]
-        public static Task<HttpResponseMessage> Run(
+        public Task<HttpResponseMessage> Run(
 			[HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequestMessage req, 
 			TraceWriter log)
         {
